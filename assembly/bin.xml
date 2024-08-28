@@ -1,0 +1,106 @@
+<assembly	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3 http://maven.apache.org/xsd/assembly-1.1.3.xsd">
+	<id>parent-assembly</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+
+	<dependencySets>
+		<!--  <dependencySet>
+			<outputDirectory>Topology-Generator</outputDirectory>	
+		</dependencySet>
+		<dependencySet>
+			<outputDirectory>Bulk-Cm</outputDirectory>	
+		</dependencySet> -->
+		<dependencySet>
+			<scope>runtime</scope>
+			<outputDirectory>BULK_CM/lib</outputDirectory>
+		</dependencySet>
+		<dependencySet>
+			<scope>runtime</scope>
+			<outputDirectory>Topology_Generator/lib</outputDirectory>
+		</dependencySet>
+	</dependencySets>
+	<!-- Includes project modules' jars -->
+	<fileSets>
+	<fileSet>
+			<directory>${project.basedir}/src/main/resources/Readme</directory>
+			<outputDirectory>/</outputDirectory>
+			<fileMode>0777</fileMode>
+			<lineEnding>unix</lineEnding>
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>	
+	<fileSet>
+			<directory>${project.basedir}/Topology-Generator/src/main/resources/config</directory>
+			<outputDirectory>Topology_Generator/config</outputDirectory>
+			<fileMode>0777</fileMode>
+			<lineEnding>unix</lineEnding>
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/Topology-Generator/src/main/resources/sample_topology</directory>
+			<outputDirectory>Topology_Generator/sample_topology</outputDirectory>
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/Topology-Generator/src/main/resources/Readme</directory>
+			<outputDirectory>/</outputDirectory>
+			<fileMode>0777</fileMode>
+			<lineEnding>unix</lineEnding>
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/Topology-Generator/src/main/resources/bin</directory>
+			<outputDirectory>Topology_Generator/bin</outputDirectory>
+			<fileMode>0777</fileMode>
+			<lineEnding>unix</lineEnding>
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+
+		<fileSet>
+			<directory>${project.basedir}/Topology-Generator/target</directory>
+			<outputDirectory>Topology_Generator/lib</outputDirectory>
+			<includes>
+				<include>*.jar</include>
+			</includes>						
+		</fileSet>	
+		
+		<fileSet>
+			<directory>${project.basedir}/Bulk-Cm/src/main/resources/config</directory>
+			<outputDirectory>BULK_CM/config</outputDirectory>
+			<fileMode>0777</fileMode>
+			<lineEnding>unix</lineEnding>
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+			<fileSet>
+			<directory>${project.basedir}/Bulk-Cm/src/main/resources/bin</directory>
+			<outputDirectory>BULK_CM/bin</outputDirectory>
+			<fileMode>0777</fileMode>
+			<lineEnding>unix</lineEnding>
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/Bulk-Cm/target</directory>
+			<outputDirectory>BULK_CM/lib</outputDirectory>
+			<includes>
+				<include>*.jar</include>
+			</includes>
+		</fileSet>
+	</fileSets>	
+		
+</assembly>

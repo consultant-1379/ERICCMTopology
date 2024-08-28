@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:o="http://openfaces.org/">
+<h:head>
+	<title>Welcome to JTemplate</title>
+</h:head>
+<h:body>
+<h:form>
+    <p:growl id="growl" showDetail="true" />
+ 
+    <h:panelGrid columns="2" columnClasses="left,right" style="width:100%">
+        <p:chart type="pie" model="#{outlierManagedBean.pieChartModel}" style="width:400px;height:300px">
+            <p:ajax event="itemSelect" listener="#{outlierManagedBean.itemSelect}" update="growl" />
+        </p:chart>
+</h:panelGrid>
+ 
+</h:form>
+</h:body>
+</html>

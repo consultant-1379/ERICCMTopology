@@ -1,0 +1,220 @@
+.kpispace{
+	margin-left:45px;
+} 
+.row{
+	/*border:solid black 1px;*/
+}
+#top{
+
+}
+li{
+	
+	border-radius:2px;
+}
+h4{
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:15px;
+}
+.logo{
+	height:50px;
+	width:50px;
+	border-radius:50%;
+	background-color:	 #cceeff;
+}
+#wrapper{
+	padding-left:0px;
+	padding-right:0px;
+	
+}
+h5{
+	    margin-top: 3px;
+    margin-bottom: 0px;
+}
+::-webkit-scrollbar {
+   
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px grey; 
+    border-radius: 5px;
+     background: #d9d9d9;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #d9d9d9; 
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #d9d9d9; 
+}
+.heading{
+	position:relative;
+	top:30px;
+}
+#row1{
+	padding-left:15px;
+	margin-right:0px;
+}
+#right{
+	border:0px;
+}
+button{
+	outline:none;
+	background-color: transparent;
+	border-style: hidden;
+
+	
+}
+button:hover{
+	background-color: transparent;
+}
+button:active {
+  background-color:  transparent;
+ 
+  
+}
+.row{
+	margin-right:0px;
+}
+.nav>li>a {
+	padding:10px;
+
+	}
+a{
+	font-size:12px;
+	padding:5px;
+	
+}
+td{
+	color:#3780BF;
+
+}
+.correlatedkpi{
+	padding:3px;
+}
+input[type=checkbox]{
+	margin-right:5px;
+}
+#Integrity,#Accessibility,#Retainability,#Mobility,#Availability{
+
+	font-size	: 11px;
+	height:120px;
+	width:190px;
+
+	opacity:0.8;
+	color:black;
+} 
+
+th{
+	color:#3780BF;
+	font-size:15px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #555;
+    cursor: default;
+    background-color:#f2f2f2;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+div.plotly-notifier {
+  visibility: hidden;
+}
+#timestamp{
+	padding:7px;
+	width:110px;
+	border-radius:6px;
+	
+}
+#enodeb_select{
+	padding:7px;
+	width:110px;
+	border-radius:6px;
+}
+#timeperiod{
+	padding-bottom:10px;
+	padding-top:10px;
+	padding-left:20px;
+}
+.draglayer{
+	cursor: pointer;
+}
+#availabilitytable{
+	margin-bottom:0px;
+	padding:5px;
+	color:#3780BF;
+}
+.table>tbody>tr>td{
+		padding:5px;
+		
+}
+#main{
+	padding-right:0px;
+}
+#date{
+	color:#3477b2;
+	padding-right:0px;
+}
+#enodeblabel{
+	color:#3477b2;padding-right:0px;margin-right:12px;
+}
+#outlierheading{
+	border:0px;margin-left:0px;border-radius:6px;padding-left:1px;padding-top:3px;padding-bottom:3px;font-size:18px;
+}
+#analysisgraph_heading{
+	border:0px;
+	margin-left:0px;
+	background-color:#3780BF;
+	border-radius:6px;
+	color:white;
+	padding-left:10px;
+	padding-top:3px;
+	padding-bottom:3px;
+	font-size:18px;
+}
+#centerheading{
+	border:0px;margin-left:0px;background-color:#3780BF;border-radius:6px;color:white;padding-left:10px;padding-top:3px;padding-bottom:3px;font-size:18px;
+}
+#serviceimpact{
+	border:0px;margin-left:0px;background-color:#3780BF;border-radius:6px;color:white;padding-left:10px;padding-top:3px;padding-bottom:3px;font-size:18px;
+}
+#outlierrow{
+	min-height:250px;border:0px;margin-left:0px;
+}
+#left{
+	border:solid white 1px;border-radius:6px;
+}
+#showtable{
+	background-color:#3780BF;color:white;float:right;
+}
+#showgraphbutton{
+	background-color:#3780BF;color:white;float:right;
+}
+#center{
+	border:solid #cccccc 1px;border-radius:6px;
+}
+#right{
+	border:solid white 1px;border-radius:6px;
+}
+#corelatedheading{
+	margin-left:0px;margin-right:0px;border:0px;border-radius:6px;background-color:#3780BF;color:white;padding-left:15px;padding-top:3px;padding-bottom:3px;font-size:18px;
+}
+#row2{
+	border:0px;min-height:225px;max-height:225px;overflow:auto;padding-left:15px;
+}
+#buttontocompare{
+	float:left;padding-left:10px;
+}
+#counter_table{
+	padding:2px;
+	width:100%;
+}
+th, td {
+    padding: 8px;
+   
+    border-bottom: 1px solid #ccc;
+}

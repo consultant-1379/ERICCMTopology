@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ericsson.counter.analytics.main</groupId>
+		<artifactId>counter-analytics-main</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.ericsson.counter.analytics.dao</groupId>
+	<artifactId>counter-analytics-data</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>counter-analytics-data</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>com.ericsson.counter.analytics.common</groupId>
+			<artifactId>counter-analytics-common</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<!-- Hibernate dependencies -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.1.7.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.12.1.GA</version>
+		</dependency>
+		<!-- Postgress Connector -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.3-1100-jdbc41</version>
+		</dependency>
+	</dependencies>
+</project>

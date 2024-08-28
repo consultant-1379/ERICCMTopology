@@ -1,0 +1,18 @@
+###############Node List Url############
+http://localhost:8080/counter-analytics-web/getNodeList?date_id=2016-06-06
+###############Outlier Url##################
+http://localhost:8080/counter-analytics-web/getKpiGroupOutliers?kpi_group=Accessibility&date_id=2016-06-04&erbs=AB801F
+############## KPI Grpah ###################
+http://localhost:8080/counter-analytics-web/getKpiGraphData?kpi_name=accessibility_initial_e_rab_establishment_success_rate&date_id=2016-06-06&eutrancellfdd=AB8011L
+#####################Corelated KPI##################
+http://localhost:8080/counter-analytics-web/getCorelatedKpi?kpi_group=Accessibility&kpi_name=accessibility_initial_e_rab_establishment_success_rate
+##############Cell Availibility By node ######################
+http://localhost:8080/counter-analytics-web/getCellAvailibilityByNode?date_id=2016-06-06&erbs=AB801F
+######## Cell Availibility by Cell ######################
+http://localhost:8080/counter-analytics-web/getCellAvailibilityByCell?date_id=2016-06-06&eutrancellfdd=AB8011L
+########## Service Impact Data #########################
+http://localhost:8080/counter-analytics-web/getServiceImpactCounterData?date_id=2016-06-06&eutrancellfdd=AB8011L&datetime_id=2016-06-06-00-00-00
+########## Kpi Cointer Data##########
+http://localhost:8080/counter-analytics-web/getKpiEventParameterData?date_id=2016-06-06&eutrancellfdd=AB8011L&datetime_id=2016-06-06-00-45-00&kpi_name=integrity_average_dl_ue_latency
+########## Kpi Cointer Data##########
+http://localhost:8080/counter-analytics-web/getCellAvailibilityGridView?date_id=2016-06-06&erbs=AB801F

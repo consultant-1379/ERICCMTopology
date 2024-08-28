@@ -1,0 +1,40 @@
+[ {
+  "kpi_name" : "integrity_average_dl_ue_latency",
+  "units" : "ms"
+}, {
+  "kpi_name" : "integrity_average_dl_pdcp_ue_throughput",
+  "units" : "kbps"
+}, {
+  "kpi_name" : "integrity_average_dl_pdcp_cell_throughput",
+  "units" : "kbps"
+}, {
+  "kpi_name" : "integrity_average_dl_mac_cell_throughput",
+  "units" : "kbps"
+}, {
+  "kpi_name" : "integrity_average_ul_pdcp_ue_throughput",
+  "units" : "kbps"
+}, {
+  "kpi_name" : "integrity_average_ul_pdcp_cell_throughput",
+  "units" : "kbps"
+}, {
+  "kpi_name" : "integrity_average_ul_mac_cell_throughput",
+  "units" : "kbps"
+}, {
+  "kpi_name" : "retainability_e_rab_session_time_normalized_loss_rate",
+  "units" : "per sec"
+}, {
+  "kpi_name" : "integrity_ul_packet_loss_rate",
+  "units" : "%"
+}, {
+  "kpi_name" : "integrity_voip_integrity",
+  "units" : "%"
+}, {
+  "kpi_name" : "accessibility_added_e_rab_establishment_success_rate",
+  "units" : "%"
+}, {
+  "kpi_name" : "accessibility_initial_e_rab_establishment_success_rate",
+  "units" : "%"
+}, {
+  "kpi_name" : "retainability_e_rab_percentage_lost",
+  "units" : "%"
+} ]

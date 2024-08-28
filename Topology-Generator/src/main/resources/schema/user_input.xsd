@@ -1,0 +1,26 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SimulationData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Simulation" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="network"/>
+              <xs:element type="xs:string" name="node_type"/>
+               <xs:element type="xs:string" name="node_release"/>
+              <xs:element type="xs:string" name="sim_mim_ver"/>
+              <xs:element type="xs:string" name="no_of_nodes"/>
+              <xs:element type="xs:string" name="node_per_cell"/>
+              <xs:element type="xs:string" name="node_prefix"/>
+              <xs:element type="xs:string" name="nb_iot_cell"/>
+              <xs:element type="xs:string" name="enableBulkCmData"/>
+              <xs:element type="xs:string" name="oss_dir"/>
+              <xs:element type="xs:string" name="sim_name"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,44 @@
+[{
+		"id":"integrity_average_dl_mac_cell_throughput",
+		
+		"kpiname":"Average DL MAC cell throughput"
+	},
+	{
+		"id":"integrity_average_dl_pdcp_cell_throughput",
+	
+		"kpiname":"Average DL PDCP cell throughput"
+	},
+	{
+	"id":"integrity_average_dl_pdcp_ue_throughput",
+	
+		"kpiname":"Average DL PDCP UE throughput"
+	
+	},
+	{
+		"id":"integrity_average_dl_ue_latency",
+	
+		"kpiname":"Average DL UE Latency"
+	},
+	{
+	"id":"integrity_average_ul_mac_cell_throughput",
+	
+		"kpiname":"Average UL MAC cell throughput"
+	
+	},
+	{
+		"id":"integrity_average_ul_pdcp_cell_throughput",
+	
+		"kpiname":"Average UL PDCP Cell throughput"
+	},
+	{"id":"integrity_average_ul_pdcp_ue_throughput",
+	
+		"kpiname":"Average UL PDCP UE throughput"
+	
+	
+	},
+	{
+		"id":"integrity_ul_packet_loss_rate",
+	
+		"kpiname":"UL packet loss Rate"
+	}
+	]

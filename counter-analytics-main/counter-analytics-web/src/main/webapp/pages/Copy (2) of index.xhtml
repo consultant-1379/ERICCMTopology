@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Network Kpi Analysis</title>
+	<h:outputStylesheet library="css" name="kpi.css"  />
+</h:head>
+<h:body>
+<div id="header">	
+<h:form>
+	<p:growl id="growl" life="3000" /> 
+	<h3>Kpi Demo</h3>
+<h:panelGrid columns="2" cellpadding="5">  
+<p:outputLabel for="german" value="Date :"/>
+<p:calendar id="german" styleClass="dateTimeField" value="#{outlierManagedBean.date_id}" locale="de" navigator="true" pattern="yyyy-MM-dd" />    
+</h:panelGrid>  
+<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
+        <p:outputLabel for="console" value="Basic:" />
+        <p:selectOneMenu id="console" value="#{outlierManagedBean.erbs}" style="width:125px">
+            <f:selectItem itemLabel="Select Node" itemValue="" />
+            <f:selectItem itemLabel="AB801F" itemValue="AB801F" />
+            <f:selectItem itemLabel="ML81GX" itemValue="ML81GX" />
+            <f:selectItem itemLabel="ML81GX12" itemValue="ML81GX12" />
+        </p:selectOneMenu>
+      </h:panelGrid>
+	<p:commandLink id="ajax" update="growl" actionListener="#{outlierManagedBean.outlierPieChart}">  
+	<h:outputText value="Submit" /> 
+	</p:commandLink>  	
+	</h:form>
+	</div>
+</h:body>
+</html>

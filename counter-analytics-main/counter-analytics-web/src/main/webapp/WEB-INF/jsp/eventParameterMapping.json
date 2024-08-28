@@ -1,0 +1,16 @@
+[ {
+  "eventName" : "LOCAL_PER_BB_CELL_EVENT",
+  "parameterName" : "EVENT_PARAM_PER_ACTIVE_UE_DL_SUM"
+}, {
+  "eventName" : "LOCAL_PER_BB_CELL_EVENT",
+  "parameterName" : "EVENT_PARAM_PER_ACTIVE_UE_UL_SUM"
+}, {
+  "eventName" : "LOCAL_PER_BB_RB_ON_CELL_QCI_LEVEL_EVENT",
+  "parameterName" : "EVENT_PARAM_PER_DRB_PDCP_ACKVOL_DL_XL"
+}, {
+  "eventName" : "LOCAL_PER_BB_UE_ON_CELL_LEVEL_EVENT",
+  "parameterName" : "EVENT_PARAM_PER_UE_THP_PDCPVOL_TRUNK_UL_XL"
+}, {
+  "eventName" : "LOCAL_PER_BB_CELL_EVENT",
+  "parameterName" : "EVENT_PARAM_UE_ACTIVE_TIME"
+} ]

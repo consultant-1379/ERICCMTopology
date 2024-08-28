@@ -1,0 +1,13 @@
+[{
+		"id":"retainability_e_rab_percentage_lost",
+		
+		"kpiname":"ERAB Percentage Lost"
+	},
+	{
+		"id":"retainability_e_rab_session_time_normalized_loss_rate",
+	
+		"kpiname":"ERAB Session Time Normalised Loss Rate"
+	}
+
+
+	]

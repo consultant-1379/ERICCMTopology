@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE model PUBLIC "-//Ericsson NMS CIF CS//CS Export Filter DTD//" "export.dtd">
+<!-- Generated on Thu Mar 01 05:55:00 GMT 2018 -->
+<!-- Generated from configuration valid -->
+<!-- Query - Base MO SubNetwork=Redback,SubNetwork=ONRM_ROOT_MO,ManagedElement=SE-BGF_01; Scope 8 -->
+<model>
+<mo fdn="SubNetwork=Redback,SubNetwork=ONRM_ROOT_MO,ManagedElement=SE-BGF_01" mimName="ONRM" mimVersion="13.2.4" lastModified="1519883700251">
+ <attr name="userLabel">SE-BGF_01</attr>
+ <attr name="nodeVersion">13B</attr>
+ <attr name="siteRef">SubNetwork=Redback,Site=MSSE-BGF_01</attr>
+ <attr name="managedElementType">
+  <seq count="2">
+    <item>EdgeRouter</item>
+    <item>Bgf</item>
+  </seq>
+ </attr>
+ <attr name="sourceType">
+   <seq count="1">
+    <item>Redback</item>
+  </seq>
+ </attr>
+ </mo>
+</model>
+<!-- Generated 1 entries -->

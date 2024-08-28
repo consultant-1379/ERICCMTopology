@@ -1,0 +1,247 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+<title>Radio Resource Preventive Maintenance</title>
+<h:outputStylesheet library="resources" name="CSS/bootstrap.min.css"/>
+<h:outputStylesheet library="resources" name="CSS/kpidemo.css"/>
+<h:outputStylesheet library="resources" name="CSS/Analysis.css"/>
+<h:outputStylesheet library="resources" name="amcharts/export.css"/>
+<h:outputScript library="resources" name="JS/jquery-3.3.1.js" />
+<h:outputScript library="resources" name="JS/bootstrap.min.js" />
+<h:outputScript library="resources" name="JS/plotly-latest.min.js" />
+<h:outputScript library="resources" name="JS/jsrender.js" />
+<h:outputScript library="resources" name="JS/jsviews.js" />
+<h:outputScript library="resources" name="amcharts/amcharts.js" />
+<h:outputScript library="resources" name="amcharts/pie.js" />
+<h:outputScript library="resources" name="amcharts/light.js" />
+<h:outputScript library="resources" name="amcharts/export.min.js" />
+<h:outputScript library="resources" name="JS/kpidemo.js" />
+</h:head>
+<body onload="hide();start();back();">
+
+<div id="wrapper" class="container-fluid" style="min-height:100vh;">
+
+<div class="col-sm-12" id="main" style="">
+
+<div class="row" id="top">
+
+<div class="col-sm-2">
+<div id="timeperiod">
+  <label id="date" style="" class="col-sm-4">  Date: </label> <select  id="timestamp" onchange="datechange();">
+       
+       
+        <option value="2016-06-04">2016-06-04</option>
+        <option value="2016-06-05">2016-06-05</option>
+        <option value="2016-06-06">2016-06-06</option>
+        <option value="2016-06-07">2016-06-07</option>
+        <option value="2016-06-08">2016-06-08</option>
+        <option value="2016-06-09">2016-06-09</option>
+        <option value="2016-06-10">2016-06-10</option>
+        <option value="2016-06-11">2016-06-11</option>
+        <option value="2016-06-12">2016-06-12</option>
+        <option value="2016-06-13">2016-06-13</option>
+        <option value="2016-06-14">2016-06-14</option>
+        <option value="2016-06-15">2016-06-15</option>
+        <option value="2016-06-16">2016-06-16</option>
+		<option value="2016-06-17">2016-06-17</option>
+        <option value="2016-06-18">2016-06-18</option>
+        <option value="2016-06-19">2016-06-19</option>
+        <option value="2016-06-20">2016-06-20</option>
+        <option value="2016-06-21">2016-06-21</option>
+        <option value="2016-06-22">2016-06-22</option>
+        <option value="2016-06-23">2016-06-23</option>
+        <option value="2016-06-24">2016-06-24</option>
+        <option value="Alldays">All Days</option>
+      </select>
+</div>
+<div id="enodeb">
+   <label id="enodeblabel" for="enodeb_select" class="col-sm-4" style=""> eNodeB: </label>
+      <select  id="enodeb_select" onchange="enodeBchange();">
+        <option value="AB801F">AB801F</option>
+        <option value="ML81GX">ML81GX</option>
+        <option value="M44H7X">M44H7X</option>
+        <option value="NVASX">NVASX</option>
+      </select>
+</div>
+</div>
+
+<div class="col-sm-8" id="kpigrp">
+
+<div class="col-sm-2 kpispace" style="margin-left:0px;"><div class="kpigrp" id="Accessibility" ></div></div>
+<div class="col-sm-2 kpispace"><div class="kpigrp" id="Integrity" ></div></div>
+<div class="col-sm-2 kpispace" ><div class="kpigrp" id="Retainability"></div></div>
+<div class="col-sm-2 kpispace"><div class="kpigrp" id="Mobility"></div></div>
+
+</div>
+<div class="col-sm-2" style="padding-bottom:5px;">
+<!--<img src="market-analysis.png" height="100px" width="170px;">-->
+<p:graphicImage name="images/market-analysis.png" width="170px" height="100px"/>
+ </div>
+</div>
+<div class="row" id="main_content">
+<div class="col-sm-12" style="padding-right:0px;padding-left:0px;">
+
+<div class="row" id="row1" style="">
+<div class="row" id="outlierheading" style=""> 
+<div class="col-sm-3"  id="analysisgraph_heading" style="">Cell availability</div>
+<div class="col-sm-7" id="centerheading" style="">
+<span>Outlier Analysis for </span> 
+<span id="cellname" style=""></span>
+<span id="displaykpigrp" style="float:right;"> </span>
+</div>
+<div class="col-sm-2" id="serviceimpact" style=""> Service Impact </div>
+
+ </div>
+<div class="row" id="outlierrow" style="">
+<div class="col-sm-3" id="left" style="">
+
+<div id="analysisgraph" >
+<button id="showtable" class="btn btn-ptimary" style=""  onclick="showtable();">Grid View</button>
+</div>
+<div id="gridview">
+<table class="table" id="AB801F">
+<thead>
+      <tr>
+        <th>Cell</th>
+        <th>Availability</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>AB8011L</td>
+        <td>100%</td>
+
+      </tr>
+      <tr>
+        <td>AB8012L</td>
+        <td>100%</td>
+
+      </tr>
+      <tr>
+        <td>AB8013L</td>
+        <td>100%</td>
+
+      </tr>
+          <tr>
+        <td>AB8011M</td>
+        <td>0%</td>
+
+      </tr>
+          <tr>
+        <td>AB8012M</td>
+        <td>0%</td>
+
+      </tr>
+          <tr>
+        <td>AB8013M</td>
+        <td>0%</td>
+
+      </tr>
+    </tbody>
+
+</table>
+<table class="table" id="ML81GX">
+<thead>
+      <tr>
+        <th>Cell</th>
+        <th>Availability</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ML81GX1</td>
+        <td>100%</td>
+
+      </tr>
+      <tr>
+        <td>ML81GX2</td>
+        <td>100%</td>
+
+      </tr>
+      <tr>
+        <td>ML81GX3</td>
+        <td>100%</td>
+
+      </tr>
+          <tr>
+        <td>ML81GX4</td>
+        <td>100%</td>
+
+      </tr>
+          <tr>
+        <td>ML81GX5</td>
+        <td>100%</td>
+
+      </tr>
+          <tr>
+        <td>ML81GX6</td>
+        <td>100%</td>
+
+      </tr>
+                <tr>
+        <td>ML81GXA</td>
+        <td>100%</td>
+
+      </tr>
+                <tr>
+        <td>ML81GXB</td>
+        <td>100%</td>
+
+      </tr>
+                <tr>
+        <td>ML81GXC</td>
+        <td>100%</td>
+
+      </tr>
+    </tbody>
+
+</table>
+<button id="showgraphbutton" class="btn btn-ptimary" style="" onclick="showgraph();">Graph View</button> 
+</div>
+</div>
+<div class="col-sm-7" id="center" style="">
+<ul class="nav nav-tabs" id="kpinametabs">
+   
+   
+
+  </ul>
+<div class="tab-content" id="result"></div>
+</div>
+
+
+<div class="col-sm-2" id="right" style="">
+
+<table id="counter_table">
+
+<tr><td><a href="#" data-toggle="tooltip" data-placement="left" title="Active UEs on Downlink">pmActiveUeDlSum</a></td><td id="pmActiveUeDlSum"></td></tr>
+<tr><td><a href="#" data-toggle="tooltip" data-placement="left" title="Active UEs on Uplink">pmActiveUeUlSum</a></td><td id="pmActiveUeUlSum"></td></tr>
+<tr><td><a href="#" data-toggle="tooltip" data-placement="left" title="The total volume on Data Radio Bearers">pmPdcpVolDlDrb</a></td><td id="pmPdcpVolDlDrb"></td ></tr>
+<tr><td><a href="#" data-toggle="tooltip" data-placement="left" title="The UL Data Radio Bearers volume used for UL UE Throughput">pmUeThpVolUl</a></td><td id="pmUeThpVolUl"></td ></tr>
+<tr><td><a href="#" data-toggle="tooltip" data-placement="left" title="Accumulated active session time for all UEs in a cell">pmSessionTimeUe</a></td><td id="pmSessionTimeUe"></td ></tr>
+
+
+</table>
+
+</div>
+</div>
+
+</div>
+<div class="row" id="corelatedheading" style="">Correlated KPI</div>
+<div class="row" id="row2" style="">
+
+
+</div>
+<div id="buttontocompare" style=""><button type="button" class="btn btn-ptimary" style="background-color:#3780BF;color:white;" onclick="analyse();">Click to Analyse</button></div>
+</div>
+
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

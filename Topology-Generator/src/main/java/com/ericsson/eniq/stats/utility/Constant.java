@@ -1,0 +1,143 @@
+/*------------------------------------------------------------------------------
+ *******************************************************************************
+ * COPYRIGHT Ericsson 2018
+ *
+ * The copyright to the computer program(s) herein is the property of
+ * Ericsson Inc. The programs may be used and/or copied only with written
+ * permission from Ericsson Inc. or in accordance with the terms and
+ * conditions stipulated in the agreement/contract under which the
+ * program(s) have been supplied.
+ *******************************************************************************
+ *----------------------------------------------------------------------------*/
+package com.ericsson.eniq.stats.utility;
+
+public interface Constant {
+    String STRING_ATTRIBUTE = "attribute";
+    String STRING_COUNTERTYPE = "counterType";
+    String STRING_DATATYPE = "dataType";
+    String TPOLOGY_JAXB_PACKAGE = "com.ericsson.eniq.stats.parser.topology.jaxb";
+    String USER_INPUT_XML_JAXB_PACKAGE = "com.ericsson.eniq.stats.user.input.jaxb";
+    String EUTRAN_FREQUENCY_REF = "eutranFrequencyRef";
+    String SOURCE_FDN = "sourceFDN";
+    String NEIGHBOUR_CELL_REF = "neighborCellRef";
+    String EXTERNAL_UTRAN_CELL_FDD_REF = "externalUtranCellFDDRef";
+    String MECONTEXT = "MeContext";
+    String PIPE = "|";
+    String XML = "xml";
+    String LTE_NETWORK = "LTE";
+    String WCDMA_NETWORK = "WCDMA";
+    String RBS = "RBS";
+    String PRBS = "PRBS";
+    String MSRBS_V2 = "MSRBS-V2";
+    String RNC_NODE_NAME = "RNC_NODE_NAME";
+    String RBS_NODE_NAME = "RBS_NODE_NAME";
+    String TOPOLOGY = "TOPOLOGY";
+    String CSV = ".csv";
+    String COMMA = ",";
+    String TOPOLOGY_METADATA_FILE_NAME = "topology";
+    String EUTRANCELLFDD = "EUtranCellFDD";
+    String EUTRANCELLTDD = "EUtranCellTDD";
+    String EUTRANCELLREALTION = "EUtranCellRelation";
+    String GERANCELLRELATION = "GeranCellRelation";
+    String UTRANCELLRELATION = "UtranCellRelation";
+    String EUTRANFREQRELATION = "EUtranFreqRelation";
+    String TIMESTAMPOFCHANGE = "timestampOfChange";
+    String HOSTINGDIGITALUNIT = "hostingDigitalUnit";
+    String MECONTEXTID = "MeContextId";
+    String USERLABEL = "userLabel";
+    String SITEREF = "siteRef";
+    String EUTRANCELLFDDID = "EUtranCellFDDId";
+    String EUTRANCELLTDDID = "EUtranCellTDDId";
+    String CELLID = "cellId";
+    String UTRANFREQRELATION = "UtranFreqRelation";
+    String NODEIPADDRESS = "nodeIpAddress";
+    String IPV4ADDRESS = "10.0.0.1";
+    String NODEIPV6ADDRESS = "nodeIpv6Address";
+    String IPV6ADDRESS = "fe80::1002:89ae:f1d9:45e5";
+    String FINGERPRINT = "fingerprint";
+    String NODEVERSION = "nodeVersion";
+    String NEMIMVERSION = "neMIMversion";
+    String MANAGEDELEMENT = "ManagedElement";
+    String MANAGEDELEMENTTYPE = "managedElementType";
+    String NBIOTCELL = "NbIotCell";
+    String NBIOTCELLID = "NbIotCellId";
+    String SUBNETWORK = "SubNetwork";
+    String GERANCELLRELATIONID = "GeranCellRelationId";
+    String UTRANCELLRELATIONID = "UtrancellRelationId";
+    String CDMA20001XRTTCELLRALATION = "Cdma20001xRttCellRelation";
+    String ENODEBFUNCTION = "ENodeBFunction";
+    String CELLRELATIONPATH = "CELL_RELATION_PATH";
+    String META_DATA_PATH = "META_DATA_PATH";
+    String OUTPUT_LOCATION = "OUTPUT_LOCATION";
+    String SAMPLE_TOPOLOGY_PATH = "SAMPLE_TOPOLOGY_PATH";
+    String USER_INPUT_PATH = "USER_INPUT_PATH";
+    String UNDERSCORE = "_";
+    String COLON = ":";
+    String DOT = ".";
+    String FP = "_fp";
+    String HYPHEN = "-";
+    String EQUAL = "=";
+    String YES = "YES";
+    String TOPOLOGYDATA = "topologyData";
+    String LOG4J_CONFIGURATION = "log4j.configuration";
+    String CPP_COUNTER_JAXB_PACKAGE = "com.ericsson.eniq.stats.parser.cppcounter.jaxb";
+    String ECIM_COUNTER_JAXB_PACKAGE = "com.ericsson.eniq.stats.parser.ecimcounter.jaxb";
+    String ERBS = "ERBS";
+    String RNC = "RNC";
+    String PROCESSORLOADID = "ProcessorLoadId";
+    String SECTORCARRIERREF = "sectorCarrierRef";
+    String RESERVEDBY = "reservedBy";
+    String SOURCEFDN = "sourceFDN";
+    String NOOFTHREAD = "NO_OF_THREADS";
+    String STATS_FILE_EXTENSION = "_statsfile.xml";
+    String RBSIUBID = "rbsIubId";
+    String DNPREFIX = "dnPrefix";
+    String CARRIERSREF = "carriersRef";
+    String CARRIERREF = "carrierRef";
+    String LAGREF = "lagRef";
+    String EXTGERANCELLREF = "extGeranCellRef";
+    String RFBRANCHRXREF = "rfBranchRxRef";
+    String SPACE = "";
+    String RNCMODULEREF = "rncModuleRef";
+    String UTRANCELLIUBLINK = "utranCellIubLink";
+    String ADJACENTCELL = "adjacentCell";
+    String EXTERNALGSMCELLREF = "externalGsmCellRef";
+    String ADMPASSIVESLOT = "admPassiveSlot";
+    String ADMACTIVESLOT = "admActiveSlot";
+    String ATMTRAFFICDESCRIPTORID = "atmTrafficDescriptorId";
+    String RPUREFS = "rpuRefs";
+    String DIGITVALUE = "\\d+";
+    String SITE = "Site";
+    String TRUE = "TRUE";
+    String NEWLINE = "\n";
+    String ENODEBFUNCTIONONE = ",ENodeBFunction=1";
+    String UTRAN = "utran";
+    String RXI = "RXI";
+    String CORE = "CORE";
+    String CORE_NETWORK = "CoreNetwork";
+    String MGW = "M-MGw";
+    String CELLO = "CELLO";
+    String EPG_EVR = "EPG-EVR";
+    String EPG_SSR = "EPG-SSR";
+    String WMG = "WMG";
+    String UPG = "UPG";
+    String WCG = "WCG";
+    String DSC = "DSC";
+    String SGSN = "SGSN";
+    String ESAPC = "ESAPC";
+    String HSS_FE = "HSS-FE";
+    String IPWORKS = "IPWORKS";
+    String CSCF = "CSCF";
+    String SBG = "SBG";
+    String MTAS = "MTAS";
+    String MANAGEDELEMENTID = "ManagedElementId";
+    String SOURCETYPE = "sourceType";
+    String MRFV = "MRFv";
+    String VEME = "vEME";
+    String EME = "EME";
+    String BBSC = "BBSC";
+    String ESASN = "ESASN";
+    String MRSV = "MRSV";
+    String SDNCP = "SDNC-P";
+    String RELEASE = "release";
+}

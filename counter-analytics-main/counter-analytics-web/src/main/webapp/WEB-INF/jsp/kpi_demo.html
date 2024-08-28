@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Radio Resource Preventive Maintenance</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="jquery-3.3.1.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="plotly-latest.min.js"></script>
+ <script src="jsrender.js" type="text/javascript"></script>
+ <script src="jsviews.js" type="text/javascript"></script>
+<script src="amcharts/amcharts.js"></script>
+<script src="amcharts/pie.js"></script>
+<script src="amcharts/light.js"></script>
+<script src="amcharts/export.min.js"></script>
+<link rel="stylesheet" href="amcharts/export.css" type="text/css" media="all" />
+<link rel="stylesheet" href="CSS/kpidemo.css">
+</head>
+<body onload="populate_enodeb();hide();back();">
+<script id="svgTemplate1" type="text/x-jsrender">
+ 
+ 
+    <li id="list" class={{:id}}  onclick="plotcorrelated(this.className);" > <a data-toggle="tab" href="{{:id}}">{{:kpiname}}</a></li>
+</script>
+
+
+<script id="svgTemplate2" type="text/x-jsrender">
+
+  
+    <div id="{{:id}}" class="tab-pane fade ">
+      <div class="col-sm-12" id="{{:kpiname}}"></div>
+		
+    </div>
+
+</script>
+
+<script id="svgTemplate3" type="text/x-jsrender">
+
+  
+    <div class="col-sm-3" style="min-height:225px;" ><div  style="padding-top:5px;"><label><input type="checkbox" name="correlatedkpi" class="correlatedkpi" value="{{:corelated_kpi_id}}"><b>{{:corelated_kpi_name}}</b> </label></div> 
+		<div id="correlated{{:corelated_kpi_id}}"></div>
+ </div>
+
+</script>
+
+<div id="wrapper" class="container-fluid" style="min-height:100vh;">
+
+<div class="col-sm-12" id="main" style="">
+
+<div class="row" id="top">
+
+<div class="col-sm-2">
+<div id="timeperiod">
+  <label id="date" style="" class="col-sm-4">  Date: </label> <select  id="timestamp" onchange="datechange();">
+       
+       
+        <option value="2016-06-04">2016-06-04</option>
+        <option value="2016-06-05">2016-06-05</option>
+        <option value="2016-06-06">2016-06-06</option>
+        <option value="2016-06-07">2016-06-07</option>
+        <option value="2016-06-08">2016-06-08</option>
+         <option value="2016-06-09">2016-06-09</option>
+         <option value="2016-06-10">2016-06-10</option>
+         <option value="2016-06-11">2016-06-11</option>
+         <option value="2016-06-12">2016-06-12</option>
+         <option value="2016-06-13">2016-06-13</option>
+          <option value="2016-06-14">2016-06-14</option>
+           <option value="2016-06-15">2016-06-15</option>
+            <option value="2016-06-16">2016-06-16</option>
+             <option value="Alldays">All Days</option>
+      </select>
+</div>
+<div id="enodeb">
+   <label id="enodeblabel" for="enodeb_select" class="col-sm-4" style=""> eNodeB: </label>
+      <select  id="enodeb_select" onchange="enodeBchange();">
+       
+      </select>
+</div>
+</div>
+
+<div class="col-sm-8" id="kpigrp">
+
+<div class="col-sm-2 kpispace" style="margin-left:0px;"><div class="kpigrp" id="Accessibility" ></div></div>
+<div class="col-sm-2 kpispace"><div class="kpigrp" id="Integrity" ></div></div>
+<div class="col-sm-2 kpispace" ><div class="kpigrp" id="Retainability"></div></div>
+<div class="col-sm-2 kpispace"><div class="kpigrp" id="Mobility"></div></div>
+
+</div>
+<div class="col-sm-2" style="padding-bottom:5px;">
+<img src="market-analysis.png" height="100px" width="170px;">
+ </div>
+</div>
+<div class="row" id="main_content">
+<div class="col-sm-12" style="padding-right:0px;padding-left:0px;">
+
+<div class="row" id="row1" style="">
+<div class="row" id="outlierheading" style=""> 
+<div class="col-sm-3"  id="analysisgraph_heading" style="">Cell availability</div>
+<div class="col-sm-7" id="centerheading" style="">
+<span>Outlier Analysis for </span> 
+<span id="cellname" style=""></span>
+<span id="displaykpigrp" style="float:right;"> </span>
+</div>
+<div class="col-sm-2" id="serviceimpact" style=""> Service Impact </div>
+
+ </div>
+<div class="row" id="outlierrow" style="">
+<div class="col-sm-3" id="left" style="">
+
+<div id="analysisgraph" >
+<button id="showtable" class="btn btn-ptimary" style=""  onclick="showtable();">Grid View</button>
+</div>
+<div id="gridview">
+<table class="table scroll" id="AB801F">
+<thead>
+      <tr>
+        <th>Cell</th>
+        <th>Availability</th>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>AB8011L</td>
+        <td>100%</td>
+   
+      </tr>
+      <tr>
+        <td>AB8012L</td>
+        <td>100%</td>
+  
+      </tr>
+      <tr>
+        <td>AB8013L</td>
+        <td>100%</td>
+     
+      </tr>
+          <tr>
+        <td>AB8011M</td>
+        <td>0%</td>
+     
+      </tr>
+          <tr>
+        <td>AB8012M</td>
+        <td>0%</td>
+     
+      </tr>
+          <tr>
+        <td>AB8013M</td>
+        <td>0%</td>
+     
+      </tr>
+    </tbody>
+
+</table>
+<table class="table scroll" id="ML81GX">
+<thead>
+      <tr>
+        <th>Cell</th>
+        <th>Availability</th>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ML81GX1</td>
+        <td>100%</td>
+   
+      </tr>
+      <tr>
+        <td>ML81GX2</td>
+        <td>100%</td>
+  
+      </tr>
+      <tr>
+        <td>ML81GX3</td>
+        <td>100%</td>
+     
+      </tr>
+          <tr>
+        <td>ML81GX4</td>
+        <td>100%</td>
+     
+      </tr>
+          <tr>
+        <td>ML81GX5</td>
+        <td>100%</td>
+     
+      </tr>
+          <tr>
+        <td>ML81GX6</td>
+        <td>100%</td>
+     
+      </tr>
+    </tbody>
+
+</table>
+<button id="showgraphbutton" class="btn btn-ptimary" style="" onclick="showgraph();">Graph View</button>
+</div>
+</div>
+<div class="col-sm-7" id="center" style="">
+<ul class="nav nav-tabs" id="kpinametabs">
+   
+   
+
+  </ul>
+<div class="tab-content" id="result"></div>
+</div>
+
+
+<div class="col-sm-2" id="right" style="">
+
+<table id="counter_table">
+
+<tr><td><a href="#" data-toggle="tooltip" data-placement="left" title="Active UEs on Downlink">pmActiveUeDlSum</a></td><td id="pmActiveUeDlSum"></td></tr>
+<tr><td><a href="#" data-toggle="tooltip" data-placement="left" title="Active UEs on Uplink">pmActiveUeUlSum</a></td><td id="pmActiveUeUlSum"></td></tr>
+<tr><td><a href="#" data-toggle="tooltip" data-placement="left" title="The total volume on Data Radio Bearers">pmPdcpVolDlDrb</a></td><td id="pmPdcpVolDlDrb"></td ></tr>
+<tr><td><a href="#" data-toggle="tooltip" data-placement="left" title="The UL Data Radio Bearers volume used for UL UE Throughput">pmUeThpVolUl</a></td><td id="pmUeThpVolUl"></td ></tr>
+<tr><td><a href="#" data-toggle="tooltip" data-placement="left" title="Accumulated active session time for all UEs in a cell">pmSessionTimeUe</a></td><td id="pmSessionTimeUe"></td ></tr>
+
+
+</table>
+
+</div>
+</div>
+
+</div>
+<div class="row" id="corelatedheading" style="">Correlated KPI</div>
+<div class="row" id="row2" style="">
+
+
+</div>
+<div id="buttontocompare" style=""><button type="button" class="btn btn-ptimary" style="background-color:#3780BF;color:white;" onclick="analyse();">Click to Analyse</button></div>
+</div>
+
+</div>
+</div>
+
+
+</div>
+</body>
+<script src="JS/kpidemo.js"></script>
+</html>
+

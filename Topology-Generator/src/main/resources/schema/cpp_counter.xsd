@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="mdc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mfh"/>
+        <xs:element maxOccurs="unbounded" ref="md"/>
+        <xs:element ref="mff"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mfh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ffv"/>
+        <xs:element ref="sn"/>
+        <xs:element ref="st"/>
+        <xs:element ref="vn"/>
+        <xs:element ref="cbt"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ffv" type="xs:string"/>
+  <xs:element name="sn" type="xs:string"/>
+  <xs:element name="st">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="vn">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="cbt" type="xs:NMTOKEN"/>
+  <xs:element name="md">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="neid"/>
+        <xs:element ref="mi"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="neid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="neun"/>
+        <xs:element ref="nedn"/>
+        <xs:element ref="nesw"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="neun" type="xs:NCName"/>
+  <xs:element name="nedn" type="xs:string"/>
+  <xs:element name="nesw" type="xs:string"/>
+  <xs:element name="mi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mts"/>
+        <xs:element ref="gp"/>
+        <xs:element maxOccurs="unbounded" ref="mt"/>
+        <xs:element maxOccurs="unbounded" ref="mv"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mts" type="xs:NMTOKEN"/>
+  <xs:element name="gp" type="xs:integer"/>
+  <xs:element name="mt" type="xs:NCName"/>
+  <xs:element name="mv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="moid"/>
+        <xs:element maxOccurs="unbounded" ref="r"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="moid" type="xs:string"/>
+  <xs:element name="r" type="xs:string"/>
+  <xs:element name="mff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ts"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ts" type="xs:NMTOKEN"/>
+</xs:schema>

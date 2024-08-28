@@ -1,0 +1,125 @@
+.row{
+	margin-left:0px;
+	margin-right:0px;
+	padding-left:10px;
+	padding-right:10px;
+	background-color: white;
+}
+
+#enodeb_selected,#timestamp,#cellname
+{
+
+	border:1px solid #eee;
+	border-radius:6px;
+	color:#3780BF;
+	background-color: #eee;
+	padding:10px;
+	font-size:14px;
+	
+
+
+}
+#enodeb_outside,#date_outside,#cell_outside
+{
+
+
+	color:#3780BF;
+	background-color: white;
+	padding-left:10px;
+	font-size:16px;
+	padding-right: 10px;
+
+}
+.heading
+{
+	text-transform:capitalize;
+	width:100%;
+	background-color: #3780BF;
+	border-radius:6px;
+	font-size:20px;
+	color:white;
+	padding-top:1px;
+	padding-bottom:6px;
+	padding-left: 10px;
+} 
+#selectedinfo
+{
+	
+} 
+#details{
+	color:#3780BF;
+}
+
+#right
+{
+	height:120px;
+	overflow:auto;
+	padding:0px;
+	
+}
+
+.container {
+    display: block;
+    position: relative;
+
+
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 2px;
+    left: -5px;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 5px;
+	left: 5px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: white;
+} 
+label{
+	font-weight:100;
+}
